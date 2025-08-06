@@ -28,12 +28,39 @@ Access the full dataset from [hate-alert/HateMM](https://github.com/hate-alert/H
 
 Access the full dataset from [Social-AI-Studio/MultiHateClip](https://github.com/Social-AI-Studio/MultiHateClip):  
 
+## Data Preprocess
+1. For hateful video trimming, can refer to the annotations provided by HateMM and MultiHateClip, and trim the hateful videos according to their time annotations to obtain trimmed hate segments.
+2. For full video feature extraction methods, refer to the feature extraction methods published by hatemm.
+3. We have provided examples of feature extraction for trimmed videos in the code folder (Feature extraction).
+
 ## Code Structure
 
-```bash
-├── data_splits/              # Temporal and 5-fold splits (video IDs)
-├── analysis/                 # Distributional analysis of segments
-├── models/                   # Baseline models & training scripts
-├── utils/                    # Helper functions
-├── figures/                  # Paper figures and visuals
-└── README.md
+The code is organized in a modular and readable structure for multimodal hateful video classification with temporal label noise analysis.
+
+Code_Label_Noise/
+├── configs/ # Configuration files
+│ └── multimodal_config.py # Main config
+│
+├── Feature_extraction/ # Feature extraction from raw videos
+│ ├── bert_hatexplain_pure_hate_seg.py # BERT-based textual features
+│ ├── MFCC_pure_hate_seg.py # Audio features using MFCCs
+│ └── vit_pure_hate_seg.py # Visual features using ViT
+│
+├── scripts/
+│ └── train_multimodal.py # Training entry point
+│
+├── src/
+│ ├── data/
+│ │ └── dataset_multimodal.py # Dataset loading and preprocessing
+│ │
+│ ├── evaluation/
+│ │ └── metrics_multimodal.py # Evaluation metrics (e.g., F1, accuracy)
+│ │
+│ ├── modules/
+│ │ └── multimodal_models.py # Model definitions (e.g., fusion models)
+│ │
+│ ├── training/
+│ │ └── trainer_multimodal.py # Training loop and optimization
+│ │
+│ └── utils/
+│ └── seed.py # Seeding for reproducibility
