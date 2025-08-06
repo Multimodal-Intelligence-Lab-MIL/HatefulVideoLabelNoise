@@ -11,12 +11,11 @@
 The rapid proliferation of online multimedia content has intensified the spread of hate speech, presenting critical societal and regulatory challenges. While recent work has advanced multimodal hateful video detection, most approaches rely on coarse, video-level annotations that overlook the temporal granularity of hateful content. This introduces substantial label noise, as videos annotated as hateful often contain long non-hateful segments. In this paper, we investigate the impact of such label ambiguity through a fine-grained approach. Specifically, we trim hateful videos from the HateMM and MultiHateClip English datasets using annotated timestamps to isolate explicitly hateful segments. We then conduct an exploratory analysis of these trimmed segments to examine the distribution and characteristics of both hateful and non-hateful content. This analysis highlights the degree of semantic overlap and the confusion introduced by coarse, video-level annotations. Finally, controlled experiments demonstrate that time-stamp noise fundamentally alters model decision boundaries and weakens classification confidence, highlighting the inherent context dependency and temporal continuity of hate speech expression. Our findings emphasize the need for temporally aware models and benchmarks for improved robustness and interpretability.
 
 
-## 🖼️ Overview
-
-*Figure: Overview of the temporal trimming and analysis pipeline.*
+## Overview
+<img width="1480" height="666" alt="88381ca1ab7d947c6220479e476f33ce" src="https://github.com/user-attachments/assets/3cd4a01f-7a1e-4f17-9428-07347f17fb2b" />
 
 ---
-## 🗂️ Code Structure
+## Code Structure
 
 ```bash
 ├── data_splits/              # Temporal and 5-fold splits (video IDs)
