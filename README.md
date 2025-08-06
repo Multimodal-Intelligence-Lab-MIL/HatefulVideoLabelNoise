@@ -15,6 +15,19 @@ The rapid proliferation of online multimedia content has intensified the spread 
 <img width="1480" height="666" alt="88381ca1ab7d947c6220479e476f33ce" src="https://github.com/user-attachments/assets/3cd4a01f-7a1e-4f17-9428-07347f17fb2b" />
 
 ---
+
+## Dataset
+Due to copyright restrictions, the raw datasets are not included. 
+You can obtain the datasets from their respective original project sites:
+
+### HateMM
+
+Access the full dataset from [hate-alert/HateMM](https://github.com/hate-alert/HateMM).
+
+### MultiHateClip
+
+Access the full dataset from [Social-AI-Studio/MultiHateClip](https://github.com/Social-AI-Studio/MultiHateClip):  
+
 ## Code Structure
 
 ```bash
