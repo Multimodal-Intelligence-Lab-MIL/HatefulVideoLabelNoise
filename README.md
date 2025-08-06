@@ -36,7 +36,7 @@ Access the full dataset from [Social-AI-Studio/MultiHateClip](https://github.com
 ## Code Structure
 
 The code is organized in a modular and readable structure for multimodal hateful video classification with temporal label noise analysis.
-
+'''
 Code_Label_Noise/
 ├── configs/ # Configuration files
 │ └── multimodal_config.py # Main config
@@ -64,3 +64,4 @@ Code_Label_Noise/
 │ │
 │ └── utils/
 │ └── seed.py # Seeding for reproducibility
+'''
